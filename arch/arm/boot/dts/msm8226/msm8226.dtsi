@@ -1233,7 +1233,8 @@ This is causing conflict to IRLED driver in Millet Wifi US Open and thus disabli
 
 	memory_hole: qcom,msm-mem-hole {
 		compatible = "qcom,msm-mem-hole";
-		qcom,memblock-remove = <0x08400000 0x4000000
+		qcom,memblock-remove = <0x08300000 0x0100000 /* Reserve for kernel hard boot */
+					0x08400000 0x4000000
 					0x0cb00000 0x2b00000 /* Increase TZ apps region to 6MB (SR #0133393) + 1MB reserved for TIMA logging at 0xd100000 */
 					0x0fa00000 0x500000>; /* Address and Size of Hole */
 	};
